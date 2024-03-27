@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy";
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    
+    width: 100%;
+    height: 100%;
+    background-color:#ba9696;
+}
+#center{
+    
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    width: 70%;
+    height: 80%;
+    
+}
+.imagecontainer{
+    /*overflow hidden means that when the sliding happens, the image will not get shrinked but instead cut*/
+    overflow: hidden;
+    /*absolute makes it exactly on top of center*/
+    position: absolute;
+    width: 0%;
+    height: 100%;
+   
+
+}
+img{
+    /*not giving width cuz check imagecontainer. If we remove width, then the cut will happen based on the width of the image*/
+    height: 100%;
+    object-fit: cover;
+}
+#one{
+    width: 0%;
+}
+.text{
+    position: absolute;
+    bottom: 15%;
+    left: -10%;
+    overflow: hidden;
+    width: 500px;
+    height: 120px;
+    z-index: 999;
+    
+   
+}
+.text h1{
+    /*top will make the 3 texts go 100px down. Making the .text div go up and hiding all the texts with overflow hidden */
+    top: 100px;
+    font-size: 6vw;
+    position: absolute;
+    color: white;
+
+}
